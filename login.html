@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ "Register" if mode == "register" else "Login" }} - JIT Davangere Chatbot</title>
+<style>
+  :root { --blue:#1e3a9e; --orange:#e8832a; --bg:#f1f3f8; --ink:#1b1f2a; }
+  * { box-sizing:border-box; }
+  html, body { height:100%; margin:0; }
+  body { font-family:"Segoe UI",Arial,sans-serif; background:var(--bg); color:var(--ink); display:flex; flex-direction:column; }
+  header { background:var(--blue); color:#fff; padding:14px 20px; border-bottom:4px solid var(--orange); }
+  header h1 { margin:0; font-size:20px; }
+  header p { margin:2px 0 0; font-size:13px; opacity:.85; }
+  main { flex:1; display:flex; align-items:center; justify-content:center; padding:16px; }
+  .card { background:#fff; border:1px solid #e1e5ee; border-radius:14px; padding:24px; width:100%; max-width:380px; }
+  .card h2 { margin:0 0 4px; font-size:20px; color:var(--blue); }
+  .sub { margin:0 0 14px; font-size:14px; color:#5b6479; }
+  label { display:block; font-size:13px; margin:12px 0 4px; }
+  input { width:100%; padding:11px 12px; border:1px solid #c7cddc; border-radius:10px; font-size:15px; }
+  input:focus-visible, button:focus-visible, a:focus-visible { outline:3px solid #7aa2ff; outline-offset:1px; }
+  .btn { width:100%; margin-top:18px; background:var(--orange); color:#fff; border:0; border-radius:10px; padding:12px; font-weight:600; font-size:15px; cursor:pointer; }
+  .btn:hover { filter:brightness(.95); }
+  .err { background:#fdecea; color:#c0270f; border-radius:8px; padding:9px 12px; font-size:14px; margin-bottom:6px; }
+  .alt { text-align:center; margin-top:16px; font-size:14px; }
+  .alt a { color:var(--blue); font-weight:600; text-decoration:none; }
+</style>
+</head>
+<body>
+<header>
+  <h1>JIT Davangere Enquiry Bot</h1>
+  <p>ಜೈನ್ ಇನ್ಸ್ಟಿಟ್ಯೂಟ್ ಆಫ್ ಟೆಕ್ನಾಲಜಿ, ದಾವಣಗೆರೆ</p>
+</header>
+
+<main>
+  <div class="card">
+    {% if mode == "register" %}
+      <h2>Create account</h2>
+      <p class="sub">Register to chat with the college assistant.</p>
+    {% else %}
+      <h2>Welcome back</h2>
+      <p class="sub">Login to continue.</p>
+    {% endif %}
+
+    {% if error %}<div class="err" role="alert">{{ error }}</div>{% endif %}
+
+    <form method="post" action="{{ '/register' if mode == 'register' else '/login' }}">
+      {% if mode == "register" %}
+        <label for="name">Full name</label>
+        <input id="name" name="name" maxlength="80" required autocomplete="name">
+      {% endif %}
+      <label for="email">Email</label>
+      <input id="email" name="email" type="email" maxlength="120" required autocomplete="email">
+      <label for="password">Password</label>
+      <input id="password" name="password" type="password" minlength="{{ 6 if mode == 'register' else 1 }}" required
+             autocomplete="{{ 'new-password' if mode == 'register' else 'current-password' }}">
+      <button class="btn" type="submit">{{ "Register" if mode == "register" else "Login" }}</button>
+    </form>
+
+    <p class="alt">
+      {% if mode == "register" %}
+        Already have an account? <a href="/login">Login</a>
+      {% else %}
+        New here? <a href="/register">Create account</a>
+      {% endif %}
+    </p>
+  </div>
+</main>
+</body>
+</html>

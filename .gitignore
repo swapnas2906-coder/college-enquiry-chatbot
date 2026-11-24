@@ -1,6 +1,5 @@
-venv/
 .env
-__pycache__/
-*.pyc
+venv/
+users.db
 *.csv
-*.db
+__pycache__/
