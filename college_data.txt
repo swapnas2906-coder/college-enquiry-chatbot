@@ -1,0 +1,49 @@
+COLLEGE: Jain Institute of Technology (JIT), Davangere, Karnataka
+
+NOTE: Except CSE fees and office phone, all details below are SAMPLE DEMO DATA. If a student asks for exact figures, say: "These are sample details. Please confirm with the office at 080-12345678."
+
+COURSES OFFERED (always list ALL of these when asked):
+B.E. programmes (with seats):
+- Computer Science and Engineering (CSE): 120 seats
+- Information Science and Engineering (ISE): 60 seats
+- Electronics and Communication Engineering (ECE): 120 seats
+- Mechanical Engineering: 60 seats
+- Civil Engineering: 60 seats
+Other programmes:
+- M.Tech
+- MBA
+
+FEES PER YEAR:
+- CSE: Rs. 1,20,000
+- ISE: Rs. 1,15,000
+- ECE: Rs. 1,10,000
+- Mechanical: Rs. 95,000
+- Civil: Rs. 95,000
+Other fees: Exam fee Rs. 3,000 per year, Bus fee Rs. 15,000 per year
+
+ADMISSION:
+- Eligibility: 12th (PUC) with Physics, Maths and Chemistry/Computer Science, minimum 45% (40% for reserved categories)
+- Entrance exams accepted: KCET, COMEDK, JEE Main
+- Last date to apply: 30 June 2027
+- Documents needed: 10th and 12th marks cards, entrance exam scorecard, transfer certificate, caste/income certificate (if applicable), passport photos, Aadhaar copy
+
+HOSTEL:
+- Boys hostel fees: Rs. 70,000 per year
+- Girls hostel fees: Rs. 75,000 per year
+- Facilities: Wi-Fi, mess, laundry, 24x7 security, study room
+
+PLACEMENTS:
+- Top companies: Infosys, TCS, Wipro, Tech Mahindra, Bosch
+- Highest package: 12 LPA
+- Average package: 5 LPA
+- Placement percentage: 85%
+
+SCHOLARSHIPS: Merit scholarships, government scholarships (SC/ST/OBC), and fee concession for toppers
+
+FACILITIES: Central library, department labs, sports ground, college bus, canteen
+
+CONTACT:
+- Office phone: 080-12345678
+- Email: admissions@example.com
+- Address: Davangere, Karnataka
+- Office timings: Mon-Sat, 9:00 AM to 5:00 PM
