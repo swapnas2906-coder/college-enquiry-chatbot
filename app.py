@@ -9,6 +9,7 @@ import time
 import uuid
 from datetime import datetime
 
+from dotenv import load_dotenv
 from flask import (Flask, Response, jsonify, redirect, render_template,
                    request, session, url_for)
 from google import genai
@@ -16,6 +17,8 @@ from google.genai import types
 from werkzeug.security import check_password_hash, generate_password_hash
 
 BASE = os.path.dirname(os.path.abspath(__file__))
+load_dotenv(os.path.join(BASE, ".env"))  # reads GEMINI_API_KEY from .env file
+
 DATA_FILE = os.path.join(BASE, "college_data.txt")
 LEADS_FILE = os.path.join(BASE, "leads.csv")
 LOGS_FILE = os.path.join(BASE, "chat_logs.csv")
@@ -27,6 +30,7 @@ ADMIN_PASSWORD = os.environ.get("ADMIN_PASSWORD", "admin123")  # change this!
 
 API_KEY = os.environ.get("GEMINI_API_KEY")
 client = genai.Client(api_key=API_KEY) if API_KEY else None
+print("API key loaded:", bool(API_KEY))  # should print True when running
 
 MODELS = ["gemini-3.8-flash", "gemini-3.5-flash-lite", "gemini-3.1-flash-lite"]
 
